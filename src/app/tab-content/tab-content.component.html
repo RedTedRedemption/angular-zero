@@ -1,0 +1,8 @@
+<div class="col">
+  <div class="list-group">
+    <div *ngFor="let obj of objects" (click)="open(obj)" router-link="/person-detail" class="list-group-item list-group-item-action">
+      <h2>{{obj.name}}</h2>
+      <small>{{obj.subinfo}}</small>
+    </div>
+  </div>
+</div>

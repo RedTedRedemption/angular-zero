@@ -1,0 +1,10 @@
+
+<ul class="nav nav-pills">
+  <li class="nav-item" *ngFor="let tab of tabs">
+    <a routerLink = {{tab.path}} class = "nav-link" (click)="onSelect(tab)" [class.active]="tab === selectedTab">{{tab.name}}</a>
+  </li>
+</ul>
+<router-outlet></router-outlet>
+
+
+
