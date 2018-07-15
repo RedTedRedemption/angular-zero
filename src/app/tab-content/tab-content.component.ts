@@ -4,6 +4,7 @@ import { object } from "../testobj";
 import { PEOPLE } from "../const";
 import { Person } from "../person";
 import { Router } from "@angular/router";
+import { person } from "../person-detail/person-detail.component";
 
 @Component({
   selector: "app-tab-content",
@@ -13,17 +14,18 @@ import { Router } from "@angular/router";
 export class TabContentComponent implements OnInit {
   constructor() {}
 
-  router = Router;
+  
 
   objects = TESTOBJS;
   cont = "tab1";
 
   people = PEOPLE;
 
-  selectedPerson: Person;
+  person
 
   selectPerson(selPerson: Person) {
-    this.selectedPerson = selPerson;
+    person = selPerson;
+    alert(person.name);
   }
 
   ngOnInit() {}

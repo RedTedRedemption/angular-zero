@@ -1,6 +1,6 @@
 <div class="col">
   <div class="list-group">
-    <a *ngFor="let person of people" router-link="/person-detail" class="list-group-item list-group-item-action">
+    <a *ngFor="let person of people" (click)="selectPerson(person)" router-link="/person-detail" class="list-group-item list-group-item-action">
       <h2>{{person.name}}</h2>
       <small>{{person.detail}}</small>
     </a>
